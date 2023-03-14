@@ -3,6 +3,7 @@ import statusCodes from './statusCodes';
 import 'express-async-errors';
 import ProductRoutes from './routes/products.routes';
 import UserRoutes from './routes/user.routes';
+import OrderRoutes from './routes/order.routes';
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.get('/', (_req: Request, res: Response) => {
 
 app.use(ProductRoutes);
 app.use(UserRoutes);
+app.use(OrderRoutes);
 
 app.use((err: Error, _req: Request, res: Response, next: NextFunction) => {
   const { name, message, details } = err as any;
