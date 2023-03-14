@@ -13,4 +13,9 @@ export default class UserService {
     const result = await this.model.create(user);
     return result;
   }
+
+  public async login(user:User): Promise<boolean | number | undefined> {
+    const result = await this.model.login(user);
+    return result;
+  }
 }

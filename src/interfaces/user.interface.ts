@@ -1,9 +1,9 @@
 interface User {
   id?:number;
-  level:number;
+  level?:number;
   password?:string;
   username:string;
-  vocation:string;
+  vocation?:string;
 }
 
 export default User;
